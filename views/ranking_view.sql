@@ -6,7 +6,8 @@ CREATE VIEW public.ranking_view AS
     users.win,
     users.loss,
     users.draw,
-    users.score
+    users.score,
+    users.fcm_token
    FROM public.users
   WHERE ((users.win <> 0) OR (users.loss <> 0) OR (users.draw <> 0));
 
