@@ -1,4 +1,4 @@
-CREATE FUNCTION public.get_ranked_users_count() RETURNS integer
+CREATE OR REPLACE FUNCTION public.get_ranked_users_count() RETURNS integer
     LANGUAGE plpgsql
     AS $$
   begin

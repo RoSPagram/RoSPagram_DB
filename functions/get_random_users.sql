@@ -1,4 +1,4 @@
-CREATE FUNCTION public.get_random_users(exclude_id text) RETURNS SETOF public.indexed_users
+CREATE OR REPLACE FUNCTION public.get_random_users(exclude_id text) RETURNS SETOF public.indexed_users
     LANGUAGE plpgsql
     AS $$
   begin

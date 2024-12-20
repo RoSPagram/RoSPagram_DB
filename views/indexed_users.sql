@@ -1,4 +1,4 @@
-CREATE VIEW public.indexed_users AS
+CREATE OR REPLACE VIEW public.indexed_users AS
  SELECT ranking_view.index,
     ranking_view.id,
     ranking_view.username,
@@ -7,7 +7,8 @@ CREATE VIEW public.indexed_users AS
     ranking_view.loss,
     ranking_view.draw,
     ranking_view.score,
-    ranking_view.fcm_token
+    ranking_view.fcm_token,
+    ranking_view.lang
    FROM public.ranking_view
 UNION ALL
  SELECT unranked_users.index,
@@ -18,7 +19,8 @@ UNION ALL
     unranked_users.loss,
     unranked_users.draw,
     unranked_users.score,
-    unranked_users.fcm_token
+    unranked_users.fcm_token,
+    unranked_users.lang
    FROM public.unranked_users;
 
 ALTER TABLE public.indexed_users OWNER TO postgres;

@@ -1,4 +1,4 @@
-CREATE TABLE public.user_tokens (
+CREATE OR REPLACE TABLE public.user_tokens (
     id text not null,
     count smallint not null default '5'::smallint,
     last_updated timestamp without time zone null,

@@ -1,4 +1,4 @@
-CREATE VIEW public.unranked_users AS
+CREATE OR REPLACE VIEW public.unranked_users AS
  SELECT (0)::bigint AS index,
     users.id,
     users.username,
@@ -7,7 +7,8 @@ CREATE VIEW public.unranked_users AS
     users.loss,
     users.draw,
     users.score,
-    users.fcm_token
+    users.fcm_token,
+    users.lang
    FROM public.users
   WHERE ((users.win = 0) AND (users.loss = 0) AND (users.draw = 0));
 

@@ -1,4 +1,4 @@
-CREATE FUNCTION public.delete_finished_match(from_id text, to_id text) RETURNS void
+CREATE OR REPLACE FUNCTION public.delete_finished_match(from_id text, to_id text) RETURNS void
     LANGUAGE plpgsql
     AS $$
 begin

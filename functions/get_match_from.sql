@@ -1,4 +1,4 @@
-CREATE FUNCTION public.get_match_from(user_id text) RETURNS TABLE(id text, username text, img_url text)
+CREATE OR REPLACE FUNCTION public.get_match_from(user_id text) RETURNS TABLE(id text, username text, img_url text)
     LANGUAGE plpgsql
     AS $$
 begin

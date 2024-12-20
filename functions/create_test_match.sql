@@ -1,4 +1,4 @@
-CREATE FUNCTION public.create_test_match() RETURNS void
+CREATE OR REPLACE FUNCTION public.create_test_match() RETURNS void
     LANGUAGE plpgsql
     AS $$
   declare

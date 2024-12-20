@@ -1,4 +1,4 @@
-CREATE VIEW public.top_ten AS
+CREATE OR REPLACE VIEW public.top_ten AS
  SELECT ranking_view.index,
     ranking_view.id,
     ranking_view.username,

@@ -1,4 +1,4 @@
-CREATE VIEW public.ranking_view AS
+CREATE OR REPLACE VIEW public.ranking_view AS
  SELECT rank() OVER (ORDER BY users.score DESC) AS index,
     users.id,
     users.username,
@@ -7,7 +7,8 @@ CREATE VIEW public.ranking_view AS
     users.loss,
     users.draw,
     users.score,
-    users.fcm_token
+    users.fcm_token,
+    users.lang
    FROM public.users
   WHERE ((users.win <> 0) OR (users.loss <> 0) OR (users.draw <> 0));
 

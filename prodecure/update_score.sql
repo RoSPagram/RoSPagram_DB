@@ -1,4 +1,4 @@
-CREATE PROCEDURE public.update_score(IN user_id text)
+CREATE OR REPLACE PROCEDURE public.update_score(IN user_id text)
     LANGUAGE plpgsql
     AS $$
   declare

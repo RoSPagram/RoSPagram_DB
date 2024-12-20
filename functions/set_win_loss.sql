@@ -1,4 +1,4 @@
-CREATE FUNCTION public.set_win_loss(winner_id text, loser_id text) RETURNS void
+CREATE OR REPLACE FUNCTION public.set_win_loss(winner_id text, loser_id text) RETURNS void
     LANGUAGE plpgsql
     AS $$
   begin

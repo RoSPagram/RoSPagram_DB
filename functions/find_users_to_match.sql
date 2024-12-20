@@ -1,4 +1,4 @@
-CREATE FUNCTION public.find_users_to_match(sender_id text) RETURNS SETOF public.indexed_users
+CREATE OR REPLACE FUNCTION public.find_users_to_match(sender_id text) RETURNS SETOF public.indexed_users
     LANGUAGE plpgsql
     AS $$
   begin

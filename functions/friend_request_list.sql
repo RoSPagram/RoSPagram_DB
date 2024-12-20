@@ -1,4 +1,4 @@
-CREATE FUNCTION public.friend_request_list(user_id text) RETURNS TABLE(id text, username text, img_url text, index bigint, send boolean)
+CREATE OR REPLACE FUNCTION public.friend_request_list(user_id text) RETURNS TABLE(id text, username text, img_url text, index bigint, send boolean)
     LANGUAGE plpgsql
     AS $$
 begin

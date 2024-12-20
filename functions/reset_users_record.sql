@@ -1,4 +1,4 @@
-CREATE PROCEDURE public.reset_users_record()
+CREATE OR REPLACE PROCEDURE public.reset_users_record()
     LANGUAGE plpgsql
     AS $$
   begin

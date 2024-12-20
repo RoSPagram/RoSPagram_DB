@@ -1,4 +1,4 @@
-CREATE FUNCTION public.get_user_data(user_id text) RETURNS SETOF public.indexed_users
+CREATE OR REPLACE FUNCTION public.get_user_data(user_id text) RETURNS SETOF public.indexed_users
     LANGUAGE plpgsql
     AS $$
 begin

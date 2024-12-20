@@ -1,4 +1,4 @@
-CREATE FUNCTION public.set_draw(id1 text, id2 text) RETURNS void
+CREATE OR REPLACE FUNCTION public.set_draw(id1 text, id2 text) RETURNS void
     LANGUAGE plpgsql
     AS $$
   begin

@@ -1,4 +1,4 @@
-CREATE TABLE public.users (
+CREATE OR REPLACE TABLE public.users (
     id text not null,
     username text null,
     img_url text null,
@@ -8,6 +8,7 @@ CREATE TABLE public.users (
     score real null default '0'::real,
     last_login date null,
     fcm_token text null,
+    lang text not null default 'en'::text,
     constraint user_pkey primary key (id)
 );
 
