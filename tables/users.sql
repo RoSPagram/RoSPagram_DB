@@ -1,6 +1,7 @@
 CREATE OR REPLACE TABLE public.users (
     id text not null,
     username text null,
+    avatar json null,
     img_url text null,
     win smallint null default '0'::smallint,
     loss smallint null default '0'::smallint,

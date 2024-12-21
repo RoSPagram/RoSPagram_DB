@@ -3,6 +3,7 @@ CREATE OR REPLACE VIEW public.top_ten AS
     ranking_view.id,
     ranking_view.username,
     ranking_view.img_url,
+    ranking_view.avatar,
     ranking_view.win,
     ranking_view.loss,
     ranking_view.draw,

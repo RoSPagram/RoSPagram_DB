@@ -2,6 +2,7 @@ CREATE OR REPLACE VIEW public.ranking_view AS
  SELECT rank() OVER (ORDER BY users.score DESC) AS index,
     users.id,
     users.username,
+    users.avatar,
     users.img_url,
     users.win,
     users.loss,

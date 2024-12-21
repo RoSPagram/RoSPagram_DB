@@ -3,6 +3,7 @@ CREATE OR REPLACE VIEW public.unranked_users AS
     users.id,
     users.username,
     users.img_url,
+    users.avatar,
     users.win,
     users.loss,
     users.draw,
