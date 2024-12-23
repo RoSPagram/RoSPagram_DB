@@ -3,6 +3,7 @@ CREATE OR REPLACE FUNCTION public.set_win_loss(winner_id text, loser_id text) RE
     AS $$
   begin
     update users set win = win + 1 where id = winner_id;
+    update user_gems set gem = gem + 1 where id = winner_id;
     update users set loss = loss + 1 where id = loser_id;
     call update_score(winner_id);
     call update_score(loser_id);

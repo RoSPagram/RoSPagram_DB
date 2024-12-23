@@ -2,7 +2,6 @@ CREATE OR REPLACE VIEW public.unranked_users AS
  SELECT (0)::bigint AS index,
     users.id,
     users.username,
-    users.img_url,
     users.avatar,
     users.win,
     users.loss,

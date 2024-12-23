@@ -3,7 +3,6 @@ CREATE OR REPLACE VIEW public.ranking_view AS
     users.id,
     users.username,
     users.avatar,
-    users.img_url,
     users.win,
     users.loss,
     users.draw,
