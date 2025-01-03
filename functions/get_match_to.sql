@@ -3,9 +3,12 @@ CREATE OR REPLACE FUNCTION public.get_match_to(user_id text) RETURNS TABLE(id te
     AS $$
 begin
   return query
-    select users.id, users.username, users.avatar, match.respond
-    from users, match
-    where users.id = match."to" and users.id in (select "to" from match where "from" = user_id);
+    select u.id, u.username, u.avatar, m.respond
+    from match m
+    join users u
+      on u.id = m."to"
+    where m."from" = user_id;
+
 end;
 $$;
 
