@@ -1,9 +1,9 @@
-CREATE OR REPLACE FUNCTION public.add_user_gems(user_id text) RETURNS void
+CREATE OR REPLACE FUNCTION public.add_user_gems(user_id text, amount smallint) RETURNS void
     LANGUAGE plpgsql
     AS $$
 begin
-    update user_gems set gem = gem + 1 where id = user_id;
+    update user_gems set gem = gem + amount where id = user_id;
 end;
 $$;
 
-ALTER FUNCTION public.use_user_gems(user_id text) OWNER TO postgres;
+ALTER FUNCTION public.add_user_gems(user_id text, amount smallint) OWNER TO postgres;
