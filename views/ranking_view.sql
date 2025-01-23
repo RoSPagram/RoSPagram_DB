@@ -8,7 +8,8 @@ CREATE OR REPLACE VIEW public.ranking_view AS
     users.draw,
     users.score,
     users.fcm_token,
-    users.lang
+    users.lang,
+    users.xp
    FROM public.users
   WHERE ((users.win <> 0) OR (users.loss <> 0) OR (users.draw <> 0));
 

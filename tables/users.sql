@@ -10,6 +10,7 @@ CREATE OR REPLACE TABLE public.users (
     last_login date null,
     fcm_token text null,
     lang text not null default 'en'::text,
+    xp smallint null default '0'::smallint,
     constraint user_pkey primary key (id)
 );
 

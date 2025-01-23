@@ -8,7 +8,8 @@ CREATE OR REPLACE VIEW public.unranked_users AS
     users.draw,
     users.score,
     users.fcm_token,
-    users.lang
+    users.lang,
+    users.xp
    FROM public.users
   WHERE ((users.win = 0) AND (users.loss = 0) AND (users.draw = 0));
 

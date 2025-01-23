@@ -8,7 +8,8 @@ CREATE OR REPLACE VIEW public.indexed_users AS
     ranking_view.draw,
     ranking_view.score,
     ranking_view.fcm_token,
-    ranking_view.lang
+    ranking_view.lang,
+    ranking_view.xp
    FROM public.ranking_view
 UNION ALL
  SELECT unranked_users.index,
@@ -20,7 +21,8 @@ UNION ALL
     unranked_users.draw,
     unranked_users.score,
     unranked_users.fcm_token,
-    unranked_users.lang
+    unranked_users.lang,
+    unranked_users.xp
    FROM public.unranked_users;
 
 ALTER TABLE public.indexed_users OWNER TO postgres;
